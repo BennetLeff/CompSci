@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Datable {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int age1;
+		int age2;
+		System.out.print("Enter your age: ");
+		age1 = scan.nextInt();
+		age2 = 7 + (age1 / 2);
+		System.out.print("You need to date someone at least " + age2 + "years old.");
+	}
+}	

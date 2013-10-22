@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class GCD {
+
+	private int x, y, z, a, b, c;
+	private int gcd;
+	private String answer;
+
+	public GCD() {
+		x = 1;
+		y = 1;
+		z = 1;
+	}
+
+	public void show() {
+		Scanner scan = new Scanner(System.in);
+		a = scan.nextInt();
+		b = scan.nextInt();
+		
+		x = a;
+		y = b;
+
+		gcd = calculate();
+		answer = x / gcd + " / " + y / gcd;
+	}
+       	public int calculate() {
+		while(b != 0) {
+			c = b;
+			b = a % c;
+			a = c;
+		}
+		return a;
+	}
+
+	public String toString() {
+		return "The fraction in lowest terms is: " + answer;
+	}
+}

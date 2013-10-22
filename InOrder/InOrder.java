@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class InOrder {
+	private int x, y, z;
+	private String input;
+	private boolean valid;
+	private char a, b, c;
+
+	public InOrder() {
+		x = 1;
+		y = 2;
+		z = 3;
+	}
+	public void calculate() {
+		Scanner scan = new Scanner(System.in);	
+		x = scan.nextInt();
+		y = scan.nextInt();
+		z = scan.nextInt();
+
+		valid = chIO();
+		System.out.println("" + x + " " + y + " " + z + " is " + valid);
+	}
+	
+	public boolean chIO() {
+		if ((x <= y) && (y <= z)) 
+			return true;
+		else  
+			return false;
+	}
+}

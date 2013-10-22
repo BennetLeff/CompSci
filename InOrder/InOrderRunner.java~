@@ -1,0 +1,6 @@
+public class InOrderRunner {
+	public void main(String[] args) {
+		InOrder io = new InOrder();
+		io.calculate();
+	}
+}	
